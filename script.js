@@ -10,7 +10,24 @@
 
     vi har content för div
     vi kanske kan outer.children.indexOf(target)   
-    confetti({origin: {x: window.event.pageX/ window.innerWidth, y: window.event.pageY/window.innerHeight}}); 
+     
 */
 
-document.getElementsByClassName("outer")[0].onclick = () => {if (window.event.target.className == "outer") return; console.log('Div med index '+Array.from(document.getElementsByClassName("outer")[0].getElementsByClassName("content")).indexOf(window.event.target)+" blev klickad");};
+let variabel = new Audio();
+
+document.getElementsByClassName("outer")[0].onclick = () => {
+    if (window.event.target.className == "outer") return;
+    console.log('Div med index ' + Array.from(document.getElementsByClassName("outer")[0].getElementsByClassName("content")).indexOf(window.event.target)+" blev klickad");
+    confetti({angle: 45, origin: {x: 0, y: 1}});
+    confetti({angle: 135, origin: {x: 1, y: 1}});
+    new Audio("/assets/tada.mp3").play();
+};
+
+
+setTimeout(()=>{
+    document.getElementById("credits").style.opacity = "0%";
+},0);
+setTimeout(()=>{
+    document.getElementById("credits").style.display = "none";
+} ,5000);
+

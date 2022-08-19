@@ -11,26 +11,55 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-    <h1>lightblue machinegun</h1>
+    <div id="credits">
+        <h1>Hej vi heter Ludvig och Tor</h1>
+
+        <p>Sponsrad av:</p>
+    </div>
+
+    <h1 class="reverse-spin">lightblue machinegun</h1>
+    <h1 class="spin">lightblue machinegun</h1>
+
     <article>
         <h3>Vad handlar den här sidan om?</h3>
         <p>Vi har skapat den här sidan för att visa hur man kan programmera i javascript på ett effektivt sätt</p>
     </article>
+    <h2>console.log:a index av den klickade div:en</h2>
+    <div id="div-click">
+        <div class="outer">
+            <div class="content">div 1</div>
+            <div class="content">div 2</div>
+            <div class="content">div 3</div>
+            <div class="content">div 4</div>
+            <div class="content">div 5</div>
+            <div class="content">div 6</div>
+            <div class="content">div 7</div>
+            <div class="content">div 8</div>
+        </div>
+    </div>    
 
-    <div class="outer">
-        <div class="content">div 1</div>
-        <div class="content">div 2</div>
-        <div class="content">div 3</div>
-        <div class="content">div 4</div>
-        <div class="content">div 5</div>
-        <div class="content">div 6</div>
-        <div class="content">div 7</div>
-        <div class="content">div 8</div>
-    </div>
+    <div id="robot" onclick="new Audio('/assets/robot.mp3').play()" style="z-index: 10;">🤖</div>
 
-    <div id="popup">
-        <p>hovra här</p>
-        <img src="https://babben.se/wp-content/uploads/2021/05/Babben-Pressbild-MBS4909-2.jpg" alt="" height="200px">
+    <div id="popup-container">
+        <div class="popup" onmouseover="variabel.setAttribute('src','/assets/vill_ha_dig.mp3'); variabel.play()" onmouseleave="variabel.pause()">
+            <p>hovra här</p>
+            <img src="https://babben.se/wp-content/uploads/2021/05/Babben-Pressbild-MBS4909-2.jpg" alt="" height="200px">
+        </div>
+    
+        <div class="popup" onmouseover="variabel.setAttribute('src','/assets/song_for_denise.mp3'); variabel.play()" onmouseleave="variabel.pause()">
+            <p>hovra här</p>
+            <img src="/assets/knugen.gif" alt="" height="200px">
+        </div>
+        <div class="popup" onmouseover="document.getElementById('major_tom').play()" onmouseleave="document.getElementById('major_tom').pause()">
+            <p>hovra här</p>
+            <video height="200px" id="major_tom">
+                <source src="/assets/major_tom.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="popup" onmouseover="variabel.setAttribute('src','/assets/negro_y_azul.mp3'); variabel.play()" onmouseleave="variabel.pause()">
+            <p>hovra här</p>
+            <img src="/assets/slideshow/combined.gif" alt="" height="200px">
+        </div>
     </div>
 </body>
 </html>

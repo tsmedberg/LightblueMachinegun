@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
+    --duration: 5000ms;
+    --nice-color: #50442c;
+    
     font-family: 'Comic Neue', cursive;
     font-style: italic;
     /* background-color: greenyellow; */
@@ -8,15 +11,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 5000ms;
-    --nice-color: #50442c;
+    transition: all var(--duration);
     cursor:e-resize; /* very nice */
 }
 body {
     background-color: greenyellow;
 }
 h1, h2, h3, h4, p {
-    margin: 1.5rem;
     transform: rotate(0.3deg);
 }
 *::first-letter {
@@ -30,15 +31,18 @@ p {
     width: auto;
 }
 h1, h2, h3, h4 {
+    margin: 5%;
     width: max-content;
-    text-shadow: 0 0 10px var(--nice-color);
 }
 article {
+    position: relative;
+    margin-top: 10%;
     border: 1px dotted var(--nice-color);
     width: max-content;
 }
 .content {
     margin: -10px;
+    border: solid red;
     background-color: var(--nice-color);
     color: blue;
     width: max-content;
@@ -54,6 +58,14 @@ article {
     font-weight: bold;
     text-align: right;
 } */
+@keyframes reverse-spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);
@@ -62,28 +74,75 @@ article {
         transform:rotate(360deg);
     }
 }
-h1{
+.outer {
+    margin: 100px;
+}
+#popup-container{
+    z-index: -1;
+    bottom: -1px;
+    display: flex;
+    position: fixed;
+}
+.popup {
+    z-index: 10;
+    position: absolute;
+    border: solid var(--nice-color);
+    position: relative;
+    bottom: -206px;
+    font-weight: bold;
+    background-color: red;
+    width: max-content;
+    height: fit-content;
+    cursor: help;
+    text-align: center;
+}
+.popup:hover {
+    bottom: -5px;
+    background-color: blueviolet;
+    box-shadow: 0 0 10px black;
+}
+#robot {
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    font-style: normal;
+}
+.spin {
+    position: absolute;
     animation-name: spin;
-    animation-duration: 5000ms;
+    animation-duration: var(--duration);
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform-origin: top left;
 }
-.outer {
-    margin: 100px;
+.reverse-spin{
+    position: absolute;
+    color: transparent;
+    animation-name: reverse-spin;
+    animation-duration: var(--duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: top left;
+    text-shadow: 0 0 10px var(--nice-color);
 }
-#popup {
-    position: fixed;
-    bottom: -205px;
+#credits{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: darkcyan;
+    background-image: url("/assets/linode.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#credits h1 {
+    font-size: 5rem;
     font-weight: bold;
-    left: 0;
-    background-color: red;
-    width: max-content;
-    height: fit-content;
-    z-index: 3;
-    cursor: vertical-text;
+    text-align: center;
+    color: var(--nice-color);
 }
-#popup:hover {
-    bottom: -5px;
-    box-shadow: 0 0 10px black;
+#credits p {
+    font-size: 5rem;
+    color: red;
 }
