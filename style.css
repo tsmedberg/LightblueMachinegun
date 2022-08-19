@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
+    /* background-color: greenyellow; */
+    color: dodgerblue;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 5000ms;
+    --nice-color: #50442c;
+    cursor:e-resize; /* very nice */
+}
+body {
+    background-color: greenyellow;
+}
+h1, h2, h3, h4, p {
+    margin: 1.5rem;
+    transform: rotate(0.3deg);
+}
+*::first-letter {
+    text-transform: lowercase;
+}
+*::selection {
+    background-color: var(--nice-color);
+    color: var(--nice-color);
+}
+p {
+    width: auto;
+}
+h1, h2, h3, h4 {
+    width: max-content;
+    text-shadow: 0 0 10px var(--nice-color);
+}
+article {
+    border: 1px dotted var(--nice-color);
+    width: max-content;
+}
+.content {
+    margin: -10px;
+    background-color: var(--nice-color);
+    color: blue;
+    width: max-content;
+    padding: 3.33px;
+    box-shadow: 0px 0px 5px tomato;
+    cursor:crosshair;
+}
+/* .content:hover {
+    margin: 1rem;
+    background-color: forestgreen;
+    color: red;
+    width: 150px;
+    font-weight: bold;
+    text-align: right;
+} */
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+h1{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: top left;
+}
+.outer {
+    margin: 100px;
+}
+#popup {
+    position: fixed;
+    bottom: -205px;
+    font-weight: bold;
+    left: 0;
+    background-color: red;
+    width: max-content;
+    height: fit-content;
+    z-index: 3;
+    cursor: vertical-text;
+}
+#popup:hover {
+    bottom: -5px;
+    box-shadow: 0 0 10px black;
+}
