@@ -42,6 +42,12 @@ article {
     border: 1px dotted var(--nice-color);
     width: max-content;
 }
+#azul{
+    width: 300px;
+}
+#azul img{
+    width: 290px;
+}
 .content {
     margin: -10px;
     border: solid red;

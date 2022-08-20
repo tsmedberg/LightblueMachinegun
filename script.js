@@ -5,14 +5,6 @@
 // Får ej använda cookies eller liknande
 // Variabeln får inte användas för att spara flera variabler (du fattar vad jag menar)
 
-/* 
-    Ideér:
-
-    vi har content för div
-    vi kanske kan outer.children.indexOf(target)   
-     
-*/
-
 let variabel = new Audio();
 
 document.getElementsByClassName("outer")[0].onclick = () => {
@@ -23,7 +15,6 @@ document.getElementsByClassName("outer")[0].onclick = () => {
     new Audio("/assets/tada.mp3").play();
 };
 
-
 setTimeout(()=>{
     document.getElementById("credits").style.opacity = "0%";
 },0);
@@ -31,3 +22,8 @@ setTimeout(()=>{
     document.getElementById("credits").style.display = "none";
 } ,5000);
 
+// gör en till gif så att vi har från 0-9 och använd sedan en random grej
+
+setInterval(() => {
+    document.querySelector("#azul img").setAttribute("src", `/assets/slideshow/${parseInt(Math.random()*10)}.gif`)
+ }, 2000);
