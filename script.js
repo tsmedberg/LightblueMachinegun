@@ -25,5 +25,5 @@ setTimeout(()=>{
 // gör en till gif så att vi har från 0-9 och använd sedan en random grej
 
 setInterval(() => {
-    document.querySelector("#azul img").setAttribute("src", `/assets/slideshow/${parseInt(Math.random()*10)}.gif`)
- }, 2000);
+    document.querySelector("#azul img").setAttribute("src", `/assets/slideshow/${Date.now().toString().slice(-3).charAt(0)}.gif`)
+}, 2100);
