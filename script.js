@@ -15,6 +15,14 @@ document.getElementsByClassName("outer")[0].onmouseover = () => {
     new Audio("/assets/tada.mp3").play();
 };
 
+document.getElementsByClassName("dataContainer")[0].onclick = () => {
+    if (window.event.target.className == "dataContainer") return;
+    window.event.target.getAttribute("data-id") ? window.event.target.innerText = window.event.target.getAttribute("data-id") : console.error("Inget data-id för div-en som blev klickad");
+    confetti({angle: 315, origin: {x: 0, y: 0}});
+    confetti({angle: 225, origin: {x: 1, y: 0}});
+    new Audio("/assets/tada.mp3").play();
+};
+
 setTimeout(()=>{
     document.getElementById("credits").style.opacity = "0%";
 },0);

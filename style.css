@@ -47,7 +47,7 @@ article {
 #azul img{
     width: 290px;
 }
-.content {
+.content, .dataContainer div {
     margin: -10px;
     border: solid red;
     background-color: var(--nice-color);
