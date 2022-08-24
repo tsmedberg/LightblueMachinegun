@@ -7,7 +7,7 @@
 
 let variabel;
 
-document.getElementsByClassName("outer")[0].onclick = () => {
+document.getElementsByClassName("outer")[0].onmouseover = () => {
     if (window.event.target.className == "outer") return;
     console.log('Div med index ' + Array.from(document.getElementsByClassName("outer")[0].getElementsByClassName("content")).indexOf(window.event.target)+" blev klickad");
     confetti({angle: 45, origin: {x: 0, y: 1}});
