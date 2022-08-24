@@ -18,11 +18,10 @@ document.getElementsByClassName("outer")[0].onclick = () => {
 setTimeout(()=>{
     document.getElementById("credits").style.opacity = "0%";
 },0);
+
 setTimeout(()=>{
     document.getElementById("credits").style.display = "none";
 } ,5000);
-
-// gör en till gif så att vi har från 0-9 och använd sedan en random grej
 
 setInterval(() => {
     document.querySelector("#azul img").setAttribute("src", `/assets/slideshow/${Date.now().toString().slice(-3).charAt(0)}.gif`)

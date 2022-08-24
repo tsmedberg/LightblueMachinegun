@@ -35,6 +35,7 @@ h1, h2, h3, h4 {
     width: max-content;
 }
 article {
+    margin: auto;
     position: relative;
     margin-top: 10%;
     border: 1px dotted var(--nice-color);
