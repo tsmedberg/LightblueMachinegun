@@ -40,27 +40,31 @@
 
     <div id="robot" onclick="new Audio('/assets/robot.mp3').play()" style="z-index: 10;">🤖</div>
 
+    <audio id="audio"></audio>
     <div id="popup-container">
-        <div class="popup" onmouseover="variabel.setAttribute('src','/assets/vill_ha_dig.mp3'); variabel.play()" onmouseleave="variabel.pause()">
+        <div class="popup" onmouseover="document.getElementById('audio').setAttribute('src','/assets/vill_ha_dig.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause()">
             <p>hovra här</p>
             <img src="https://babben.se/wp-content/uploads/2021/05/Babben-Pressbild-MBS4909-2.jpg" alt="" height="200px">
         </div>
     
-        <div class="popup" onmouseover="variabel.setAttribute('src','/assets/song_for_denise.mp3'); variabel.play()" onmouseleave="variabel.pause()">
+        <div class="popup" onmouseover="document.getElementById('audio').setAttribute('src','/assets/song_for_denise.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause()">
             <p>hovra här</p>
             <img src="/assets/knugen.gif" alt="" height="200px">
         </div>
+    
         <div class="popup" onmouseover="document.getElementById('major_tom').play()" onmouseleave="document.getElementById('major_tom').pause()">
             <p>hovra här</p>
             <video height="200px" id="major_tom">
                 <source src="/assets/major_tom.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="popup" id="azul" onmouseover="variabel.setAttribute('src','/assets/negro_y_azul.mp3'); variabel.play()" onmouseleave="variabel.pause();">
+    
+        <div class="popup" id="azul" onmouseover="document.getElementById('audio').setAttribute('src','/assets/negro_y_azul.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause();">
             <p>hovra här</p>
             <img src="/assets/slideshow/combined.gif" alt="" height="200px">
         </div>
-        <div class="popup" id="porr" onmouseover="variabel.setAttribute('src','/assets/rick.mp3'); variabel.play()" onmouseleave="variabel.pause();">
+        
+        <div class="popup" id="porr" onmouseover="document.getElementById('audio').setAttribute('src','/assets/rick.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause();">
             <p>hovra för porr</p>
             <img src="/assets/therock.png" alt="" height="200px">
         </div>
