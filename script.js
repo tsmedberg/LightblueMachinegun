@@ -15,6 +15,19 @@ document.getElementsByClassName("outer")[0].onmouseover = () => {
     new Audio("/assets/tada.mp3").play();
 };
 
+document.getElementsByClassName("dataContainer")[0].onclick = () => {
+    if (window.event.target.className == "dataContainer") return;
+    if (window.event.target.dataset.id === undefined) return window.event.target.innerText = "Denna div har inte ett data-id attribut";
+    window.event.target.innerText = window.event.target.dataset.id;
+}
+
+document.getElementById("reset-button").onclick = () => {
+    for (variabel = 0; variabel < document.getElementsByClassName("dataContainer")[0].getElementsByTagName("div").length; variabel++)
+    {
+        document.getElementsByClassName("dataContainer")[0].getElementsByTagName("div")[variabel].innerText = "a div";
+    }
+}
+
 setTimeout(()=>{
     document.getElementById("credits").style.opacity = "0%";
 },0);

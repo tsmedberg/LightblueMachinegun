@@ -57,6 +57,16 @@ article {
     box-shadow: 0px 0px 5px tomato;
     cursor:crosshair;
 }
+.dataContainer:nth-child(n){
+    margin: -10px;
+    border: solid red;
+    background-color: var(--nice-color);
+    color: blue;
+    width: max-content;
+    padding: 3.33px;
+    box-shadow: 0px 0px 5px tomato;
+    cursor:crosshair;
+}
 /* .content:hover {
     margin: 1rem;
     background-color: forestgreen;
@@ -81,7 +91,12 @@ article {
         transform:rotate(360deg);
     }
 }
-.outer {
+#div-click{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.dataContainer{
     margin: 100px;
 }
 #popup-container{
