@@ -7,7 +7,7 @@
 
 let variabel;
 
-document.getElementsByClassName("outer")[0].onmouseover = () => {
+document.getElementsByClassName("outer")[0].onclick = () => {
     if (window.event.target.className == "outer") return;
     console.log('Div med index ' + Array.from(document.getElementsByClassName("outer")[0].getElementsByClassName("content")).indexOf(window.event.target)+" blev klickad");
     confetti({angle: 45, origin: {x: 0, y: 1}});
@@ -17,7 +17,6 @@ document.getElementsByClassName("outer")[0].onmouseover = () => {
 
 document.getElementsByClassName("dataContainer")[0].onclick = () => {
     if (window.event.target.className == "dataContainer" || window.event.target.id == "reset-button") return;
-    console.log(window.event.target)
     if (window.event.target.dataset.id === undefined) {
         console.error("Inget data-id för div-en som blev klickad");
         return window.event.target.innerText = "Denna div har inte ett data-id attribut";
