@@ -12,7 +12,8 @@ document.getElementsByClassName("outer")[0].onmouseover = () => {
     console.log('Div med index ' + Array.from(document.getElementsByClassName("outer")[0].getElementsByClassName("content")).indexOf(window.event.target)+" blev klickad");
     confetti({angle: 45, origin: {x: 0, y: 1}});
     confetti({angle: 135, origin: {x: 1, y: 1}});
-    new Audio("/assets/tada.mp3").play();
+    //Eftersom Fredric inte gillar ljudeffekter
+    //new Audio("/assets/tada.mp3").play();
 };
 
 document.getElementsByClassName("dataContainer")[0].onclick = () => {
@@ -20,7 +21,7 @@ document.getElementsByClassName("dataContainer")[0].onclick = () => {
     window.event.target.getAttribute("data-id") ? window.event.target.innerText = window.event.target.getAttribute("data-id") : console.error("Inget data-id för div-en som blev klickad");
     confetti({angle: 315, origin: {x: 0, y: 0}});
     confetti({angle: 225, origin: {x: 1, y: 0}});
-    new Audio("/assets/tada.mp3").play();
+    //new Audio("/assets/tada.mp3").play(); 
 };
 
 setTimeout(()=>{
