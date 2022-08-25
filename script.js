@@ -17,6 +17,7 @@ document.getElementsByClassName("outer")[0].onmouseover = () => {
 
 document.getElementsByClassName("dataContainer")[0].onclick = () => {
     if (window.event.target.className == "dataContainer") return;
+    if (window.event.target.id == "reset-button") return;
     if (window.event.target.dataset.id === undefined) return window.event.target.innerText = "Denna div har inte ett data-id attribut";
     window.event.target.innerText = window.event.target.dataset.id;
 }
