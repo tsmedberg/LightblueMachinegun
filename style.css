@@ -40,6 +40,7 @@ article {
     margin-top: 10%;
     border: 1px dotted var(--nice-color);
     width: max-content;
+    padding: 0.5rem;
 }
 #azul{
     width: 300px;
