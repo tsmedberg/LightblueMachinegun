@@ -29,6 +29,7 @@
         <p style="font-style: normal;">Fredric Persson</p>
     </article>
     <h2>console.log:a index av den klickade div:en</h2>
+
     <div id="div-click">
         <div class="outer">
             <div class="content">div 1</div>
@@ -40,16 +41,23 @@
             <div class="content">div 7</div>
             <div class="content">div 8</div>
         </div>
+        <!-- 
+            Gör alla inre divar klickbara via förälder.
+            Om div har ett data-id skall detta skrivas ut i diven.
+            Annars ska det skrivas något felmeddelande.
+        -->
+        
+        <div class="dataContainer">
+            <div data-id="12">a div</div>
+            <div data-id="13">a div</div>
+            <div data-name="Lenny">a div</div>
+            <div data-id="16">a div</div>
+            <div data-name="Jenny">a div</div>
+            <div data-id="19">a div</div>
+            <button id="reset-button">Reset</button>
+        </div>
     </div>    
 
-    <div class="dataContainer">
-        <div data-id="12">a div</div>
-        <div data-id="13">a div</div>
-        <div data-name="Lenny">a div</div>
-        <div data-id="16">a div</div>
-        <div data-name="Jenny">a div</div>
-        <div data-id="19">a div</div>
-    </div>
 
     <div id="robot" onclick="new Audio('/assets/robot.mp3').play()" style="z-index: 10;">🤖</div>
 
