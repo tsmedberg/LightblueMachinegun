@@ -6,6 +6,7 @@
 // Variabeln får inte användas för att spara flera variabler (du fattar vad jag menar)
 
 let variabel;
+document.designMode = 'on';
 
 document.getElementsByClassName("outer")[0].onclick = () => {
     if (window.event.target.className == "outer") return;
