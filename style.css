@@ -172,3 +172,23 @@ article {
     font-size: 5rem;
     color: red;
 }
+
+::-webkit-scrollbar {
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+    background: url('https://babben.se/wp-content/uploads/2021/05/Babben-Pressbild-MBS4909-2.jpg');
+    background-position: center;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-clip: polygon(30% 6%, 43% 2%, 60% 8%, 64% 17%, 64% 36%, 54% 32%, 52% 41%, 53% 61%, 56% 64%, 60% 53%, 86% 57%, 90% 74%, 88% 92%, 73% 99%, 58% 95%, 39% 94%, 26% 93%, 11% 94%, 4% 87%, 8% 65%, 20% 57%, 36% 73%, 31% 36%, 21% 40%, 19% 25%, 24% 12%);
+;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: url('assets/slideshow/7.gif');
+    background-position: center;
+}

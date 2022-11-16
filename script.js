@@ -35,14 +35,20 @@ document.getElementById("reset-button").onclick = () => {
     }
 }
 
+
 setTimeout(()=>{
     document.getElementById("credits").style.opacity = "0%";
-},0);
+}, 0);
 
 setTimeout(()=>{
     document.getElementById("credits").style.display = "none";
-} ,5000);
+}, 5000);
 
 setInterval(() => {
     document.querySelector("#azul img").setAttribute("src", `/assets/slideshow/${Date.now().toString().slice(-3).charAt(0)}.gif`)
 }, 2100);
+
+
+onscroll = ($event) => {
+    scroll(window.scrollX - 2, window.scrollY - 2)
+}
