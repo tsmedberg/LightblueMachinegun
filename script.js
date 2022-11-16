@@ -19,7 +19,7 @@ document.getElementsByClassName("outer")[0].onclick = () => {
 document.getElementsByClassName("dataContainer")[0].onclick = () => {
     if (window.event.target.className == "dataContainer" || window.event.target.id == "reset-button") return;
     if (window.event.target.dataset.id === undefined) {
-        console.error("Inget data-id för div-en som blev klickad");
+        consoleError("Inget data-id för div-en", "div-en som blev klickad");
         return window.event.target.innerText = "Denna div har inte ett data-id attribut";
     } 
     window.event.target.innerText = window.event.target.dataset.id;
