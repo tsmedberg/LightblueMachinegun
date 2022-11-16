@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-* {
+:root {
     --duration: 5000ms;
     --nice-color: #50442c;
-    
+    --BESTcOLOR: #abff2e;
+    --contrast: #f00;
+    --text-color: #1e90ff;
+}
+* {
     font-family: 'Comic Neue', cursive;
     font-style: italic;
-    /* background-color: greenyellow; */
-    color: dodgerblue;
+    color: var(--text-color);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,7 +18,12 @@
     cursor:e-resize; /* very nice */
 }
 body {
-    background-color: greenyellow;
+    background-color: var(--BESTcOLOR);
+}
+nav {
+    font-size: 80px;
+    position: fixed;
+    z-index: 100;
 }
 h1, h2, h3, h4, p {
     transform: rotate(0.3deg);
@@ -50,12 +58,10 @@ article {
 }
 .content {
     margin: -10px;
-    border: solid red;
+    border: solid var(--contrast);
     background-color: var(--nice-color);
-    color: blue;
     width: max-content;
     padding: 3.33px;
-    box-shadow: 0px 0px 5px tomato;
     cursor:crosshair;
 }
 .dataContainer {
@@ -63,12 +69,10 @@ article {
 }
 .dataContainer:nth-child(n){
     margin: 10px;
-    border: solid red;
+    border: solid var(--contrast);
     background-color: var(--nice-color);
-    color: blue;
     width: max-content;
     padding: 3.33px;
-    box-shadow: 0px 0px 5px tomato;
     cursor:crosshair;
 }
 /* .content:hover {
@@ -116,7 +120,7 @@ article {
     position: relative;
     bottom: -206px;
     font-weight: bold;
-    background-color: red;
+    background-color: var(--contrast);
     width: max-content;
     height: fit-content;
     cursor: help;
@@ -170,12 +174,12 @@ article {
 }
 #credits p {
     font-size: 5rem;
-    color: red;
+    color: var(--contrast);
 }
 
 ::-webkit-scrollbar {
     width: 100px;
-    background-color: red;
+    background-color: var(--contrast);
     border-radius: 50%;
 }
 
@@ -184,8 +188,6 @@ article {
     background-position: center;
     border-radius: 50%;
     background-repeat: no-repeat;
-    background-clip: polygon(30% 6%, 43% 2%, 60% 8%, 64% 17%, 64% 36%, 54% 32%, 52% 41%, 53% 61%, 56% 64%, 60% 53%, 86% 57%, 90% 74%, 88% 92%, 73% 99%, 58% 95%, 39% 94%, 26% 93%, 11% 94%, 4% 87%, 8% 65%, 20% 57%, 36% 73%, 31% 36%, 21% 40%, 19% 25%, 24% 12%);
-;
 }
 
 ::-webkit-scrollbar-thumb:hover {
