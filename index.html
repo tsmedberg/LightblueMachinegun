@@ -12,16 +12,18 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+    <!-- <link rel="stylesheet" href="style.css" style="display: block;"> -->
+
     <div id="credits">
         <h1>Hej vi heter Ludvig och Tor</h1>
 
         <p>Sponsrad av:</p>
     </div>
     <nav>
-        <li class="nav-item" onclick="dissleksi()">Disoleksi</li>
-        <li class="nav-item" style="rotate: 180deg;" onclick="ʇɹǝʌuᴉ()">Invertera</li>
-        <li class="nav-item" id="contrast" onclick="lowContrast()">Low contrast</li>
-        <li class="nav-item" onclick="toggleAutoscroll()">Toggle auto-scroll</li>
+        <li class="nav-item" onclick="dissleksi()"><blink>Disoleksi</blink></li>
+        <li class="nav-item" style="rotate: 180deg;" onclick="ʇɹǝʌuᴉ()"><blink>Invertera</blink></li>
+        <li class="nav-item" id="contrast" onclick="lowContrast()"><blink>Low contrast</blink></li>
+        <li class="nav-item" onclick="toggleAutoscroll()"><blink>Toggle auto-scroll</blink></li>
     </nav>
 
     <h1 class="reverse-spin">lightblue machinegun</h1>
@@ -32,8 +34,13 @@
         <p>Vi har skapat den här sidan för att visa hur man kan programmera i javascript på ett effektivt sätt</p>
     </article>
     <article>
+        <a href="https://tsmedberg.se/chat/create.php">
+            <h3>Shatt+App: Klicka Här</h3>
+        </a>
+    </article>
+    <article>
         <p style="font-style: italic; font-weight: bold;">"Det bara tutar när jag klickar:)"</p>
-        <p style="font-style: normal;">Fredric Persson</p>
+        <p style="font-style: normal;">Fredric <blink>Persson</blink></p>
     </article>
     <h2>console.log:a index av den klickade div:en</h2>
 
@@ -89,7 +96,7 @@
     
         <div class="popup" id="azul" onmouseover="document.getElementById('audio').setAttribute('src','/assets/negro_y_azul.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause();">
             <p>hovra här</p>
-            <img src="/assets/slideshow/combined.gif" alt="" height="200px">
+            <img src="/assets/slideshow/0.gif" alt="" height="200px">
         </div>
         
         <div class="popup" id="porr" onmouseover="document.getElementById('audio').setAttribute('src','/assets/rick.mp3'); document.getElementById('audio').play()" onmouseleave="document.getElementById('audio').pause();">

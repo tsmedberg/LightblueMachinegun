@@ -72,6 +72,7 @@ setInterval(() => {
             `/assets/slideshow/${Date.now().toString().slice(-3).charAt(0)}.gif`
         );
 }, 2100);
+
 // inte ens ett skämt, denna måste vara indenterad såhär för att funktionen ska fungera
         onscroll = ($event) => {
             autoScroll();
@@ -81,8 +82,32 @@ function autoScroll() {
     scroll(window.scrollX - 2, window.scrollY - 2);
 }
 
+function randomizeCase(text) {
+    console.log(text);
+    for (variabel in text) {
+        if (Math.random() > 0.5) {
+            text += text[variabel].toUpperCase()
+        } else {
+            text += text[variabel].toLowerCase()
+        }
+    }
+    return text.slice(text.length / 2);
+}
+
+function getInsideOfHTMLTags(text) {
+    if (text.indexOf('>') == -1) {
+        return text;
+    }
+    if (text.indexOf('>', text.indexOf('>') + 1) != text.length - 1) {
+        return getInsideOfHTMLTags(text.substring(text.indexOf('>') + 1, text.lastIndexOf('<')));
+    }
+    return text.substring(text.indexOf('>') + 1, text.lastIndexOf('<'));
+}
+
 function dissleksi() {
-    console.log("desleksi");
+    document.querySelectorAll('body *').forEach(x => {
+        console.log(getInsideOfHTMLTags(x.innerHTML))
+    })
 }
 
 function ʇɹǝʌuᴉ() {
@@ -96,7 +121,7 @@ function lowContrast() {
         document.querySelector("#contrast").innerText.toLowerCase() ==
         "high contrast"
     ) {
-        document.documentElement.style.setProperty("--BESTcOLOR", "#abff2e");
+        document.documentElement.style.setProperty("--BESTcOLOR", "#BADA55");
         document.documentElement.style.setProperty("--text-color", "#1e90ff");
         document.documentElement.style.setProperty("--contrast", "#f00");
         document.documentElement.style.setProperty("--nice-color", "#50442c");
@@ -116,12 +141,10 @@ function toggleAutoscroll() {
         }) + []
     ) { 
         onscroll = () => { };
-        console.log('tre')
     } else {
         onscroll = ($event) => {
             autoScroll();
         };
-        console.log('no')
         scroll(window.scrollX - 2, window.scrollY - 2);
     }
 }
